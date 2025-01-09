@@ -48,7 +48,6 @@ local phrases = {
     "Gamble gems at gg / 6uUfW6uczr and win big!",
     "Win amazing prizes by gambling your gems at gg / 6uUfW6uczr",
     "Multiply your gems at gg / 6uUfW6uczr",
-    "Try your luck with your gems at gg / 6uUfW6uczr and win rewards!",
     "Safe and fair gem gambling awaits you at gg / 6uUfW6uczr",
     "Trustworthy gem gambling available at gg / 6uUfW6uczr",
     "Experience secure gem gambling at gg / 6uUfW6uczr"
