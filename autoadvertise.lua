@@ -41,9 +41,25 @@ local function jumpToServer()
     end
 end
 
-for i = 1, 20 do
-    game:GetService('TextChatService').TextChannels.RBXGeneral:SendAsync('Join gg / 6uUfW6uczr to gamble Pets Go gems and win big!')
-    wait(1)
+local phrases = {
+    "Join gg / 6uUfW6uczr to gamble gems and win big!",
+    "Win big rewards at gg / 6uUfW6uczr",
+    "Play now at gg / 6uUfW6uczr for gems!",
+    "Gamble gems at gg / 6uUfW6uczr and win big!",
+    "Win amazing prizes by gambling your gems at gg / 6uUfW6uczr",
+    "Multiply your gems at gg / 6uUfW6uczr",
+    "Bet your gems at gg / 6uUfW6uczr for a chance to score big!",
+    "Try your luck with your gems at gg / 6uUfW6uczr and win rewards!",
+    "Safe and fair gem gambling awaits you at gg / 6uUfW6uczr",
+    "Trustworthy gem gambling available at gg / 6uUfW6uczr",
+    "Experience secure gem gambling at gg / 6uUfW6uczr",
+    "Be part of the action! Gamble your gems at gg / 6uUfW6uczr today!"
+}
+
+for i = 1, 15 do
+    local message = phrases[math.random(1, #phrases)]
+    game:GetService('TextChatService').TextChannels.RBXGeneral:SendAsync(message)
+    wait(math.random(2, 5))
 end
 
 jumpToServer()
