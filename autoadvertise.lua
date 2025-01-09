@@ -22,7 +22,7 @@ local function jumpToServer()
         for i, v in ipairs(body.data) do
             if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) then
                 local availableSlots = v.maxPlayers - v.playing
-                local minPlayersThreshold = 10
+                local minPlayersThreshold = 12
 
                 if availableSlots > 0 and v.playing >= minPlayersThreshold and v.id ~= game.JobId then
                     table.insert(servers, v.id)
