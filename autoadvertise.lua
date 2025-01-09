@@ -14,7 +14,7 @@ end)
 
 local function jumpToServer()
     local sfUrl = "https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=%s&limit=%s&excludeFullGames=true"
-    local req = request({Url=string.format(sfUrl, 19006211286, "Desc", 100)})
+    local req = request({Url = string.format(sfUrl, 19006211286, "Desc", 100)})
     local body = HttpService:JSONDecode(req.Body)
     local servers = {}
 
@@ -32,12 +32,20 @@ local function jumpToServer()
     end
 
     if #servers > 0 then
-        local randomServerIndex = math.random(1, #servers)
-        local randomServerId = servers[randomServerIndex]
+        for i = 1, #servers do
+            local randomServerIndex = math.random(1, #servers)
+            local randomServerId = servers[randomServerIndex]
 
-        game:GetService("TeleportService"):TeleportToPlaceInstance(19006211286, randomServerId, localPlayer)
-    else
-        warn("No available servers found.")
+            local success, err = pcall(function()
+                TeleportService:TeleportToPlaceInstance(19006211286, randomServerId, localPlayer)
+            end)
+
+            if success then
+                return
+            else
+                table.remove(servers, randomServerIndex)
+            end
+        end
     end
 end
 
