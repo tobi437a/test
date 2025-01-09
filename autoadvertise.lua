@@ -50,13 +50,15 @@ local phrases = {
     "Multiply your gems at gg / 6uUfW6uczr",
     "Safe and fair gem gambling awaits you at gg / 6uUfW6uczr",
     "Trustworthy gem gambling available at gg / 6uUfW6uczr",
-    "Experience secure gem gambling at gg / 6uUfW6uczr"
+    "Experience secure gem gambling at gg / 6uUfW6uczr",
+    "Blackjack available at gg / 6uUfW6uczr",
+    "Random gem drops at gg / 6uUfW6uczr"
 }
 
 for i = 1, 15 do
     local message = phrases[math.random(1, #phrases)]
     game:GetService('TextChatService').TextChannels.RBXGeneral:SendAsync(message)
-    wait(math.random(3, 7))
+    wait(math.random(5, 10))
 end
 
 jumpToServer()
