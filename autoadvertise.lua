@@ -9,7 +9,7 @@ local localPlayer = players.LocalPlayer
 local HttpService = game:GetService("HttpService")
 
 localPlayer.OnTeleport:Connect(function(state)
-    queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()")
+    queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/tobi437a/test/refs/heads/main/autoadvertise.lua'))()")
 end)
 
 local function jumpToServer()
